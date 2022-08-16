@@ -14,11 +14,6 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 public class ServletConfig implements WebMvcConfigurer {
 
-//    @Override
-//    public void configureViewResolvers(final ViewResolverRegistry registry) {
-//        registry.jsp("/WEB-INF/views/", ".jsp");
-//    }
-
     /**
      * View resolver
      *
