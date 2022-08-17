@@ -1,7 +1,7 @@
 server:
-  port: 8081
+  port: 8080
   servlet:
-    context-path:
+    context-path: /
 spring:
   thymeleaf:
     mode: HTML
@@ -17,11 +17,7 @@ spring:
       charset: UTF-8
       enabled: true
       force: true
-  resources:
-    static-locations=classpath: /resources/static/css/
-  mvc:
-    static-path-pattern: /resources/**
 #logging:
 #  config: classpath:log4j2.xml
-management:
-  add-application-context-header: false
+#management:
+#  add-application-context-header: false
