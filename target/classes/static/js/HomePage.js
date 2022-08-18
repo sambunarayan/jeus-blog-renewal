@@ -23,7 +23,7 @@ $(document).ready(function() {
         // ajax call get data from server and append to the div
         $.ajax({
             type: 'GET',
-            url: '/app/v1/it/board/post/latest/'+lastIdx,
+            url: '/blog-rest/time-line/latest/'+lastIdx,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
         }).done(function(json) {
