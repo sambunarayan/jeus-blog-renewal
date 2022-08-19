@@ -15,6 +15,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * TimeLine business logic
+ */
 @Log4j2
 @Service
 public class TimeLineService {
