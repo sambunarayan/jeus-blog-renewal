@@ -3,6 +3,7 @@ $(document).ready(function() {
     init();
     showLatestPostList();
     function init() {
+        console.log("init()");
         addLatestPostList($("#last_post_id").val());
     }
     function showLatestPostList() {

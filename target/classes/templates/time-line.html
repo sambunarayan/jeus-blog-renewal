@@ -4,8 +4,8 @@
 <main class="container">
     <div class="p-4 p-md-4 mb-4 text-white rounded bg-light-dark">
         <div class="col-md-6 px-0">
-            <h1 class="display-4 font-italic" name="mainBannerTitle" th:text="${mainTitle}"></h1>
-            <p class="lead my-3" name="mainBannerDetail" th:text="${mainTitleDetail}"></p>
+            <h1 class="display-4 font-italic" name="mainBannerTitle" th:text="#{main.title.message}"></h1>
+            <p class="lead my-3" name="mainBannerDetail" th:text="#{main.title.detail.message}"></p>
         </div>
     </div>
     <div class="row mb-2">
@@ -13,24 +13,12 @@
             Recent posts
         </h3>
         <div id="timeline" class="col-md-8 border-bottom">
-            <input type="hidden" id="last_post_id" name="last_post_id" th:value="${lastIndexId}" readonly="readonly">
-            {{#LatestPost}}
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 {{boardNameColor}}">{{boardName}}</strong>
-                        <h3 class="mb-0">{{title}}</h3>
-                        <div class="mb-1 text-muted">{{createdDate}}</div>
-                        <p class="card-text mb-auto">{{content}}</p>
-                        <a href="/app/v1/it/board/post/list/{{boardName}}?bno={{id}}" class="stretched-link">Continue
-                        reading</a>
-                    </div>
-                </div>
-            {{/LatestPost}}
+            <input type="hidden" id="last_post_id" name="last_post_id" th:value="${timeLine.lastIndexId}" readonly="readonly">
         </div>
         <div class="col-md-4">
             <div class="p-4 mb-3 bg-light rounded">
                 <h4 class="font-italic">About me</h4>
-                <p class="mb-0" th:text="${aboutMe}">
+                <p class="mb-0" th:text="#{profil.aboutme}">
                 </p>
             </div>
             <div class="p-4">
