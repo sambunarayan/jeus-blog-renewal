@@ -1,7 +1,10 @@
 package jp.co.jeus_blog.service;
 
 import jp.co.jeus_blog.dto.BoardResponseDto;
+import jp.co.jeus_blog.dto.PostResponseDto;
 import jp.co.jeus_blog.repository.BoardRepository;
+import jp.co.jeus_blog.repository.PostRepository;
+import jp.co.jeus_blog.repository.entity.Post;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +18,9 @@ import java.util.stream.Collectors;
 public class ITBulletinBoardService {
 
     @Autowired
-    private BoardRepository repository;
+    private BoardRepository boardRepository;
+    @Autowired
+    private PostRepository postRepository;
 
     /**
      * Returns all board data.
@@ -24,9 +29,32 @@ public class ITBulletinBoardService {
      */
     @Transactional
     public List<BoardResponseDto> getAllPosts() {
-        return repository.findAll()
+        return boardRepository.findAll()
                 .stream()
                 .map(e -> new BoardResponseDto(e))
                 .collect(Collectors.toList());
+    }
+
+    /**
+     *
+     * @param boardName
+     * @return
+     */
+    @Transactional
+    public List<PostResponseDto> findByBoardNameDesc(String boardName) {
+        return postRepository.findByBoardNameDesc(boardName).stream()
+                .map(p -> new PostResponseDto(p))
+                .collect(Collectors.toList());
+    }
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    @Transactional
+    public PostResponseDto findById(Long id) {
+        Post post = postRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("No result record. id = " + id));
+        return new PostResponseDto(post);
     }
 }

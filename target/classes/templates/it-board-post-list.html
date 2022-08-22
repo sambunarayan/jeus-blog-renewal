@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/header"/>
+
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 border text-black rounded bg-white">
+        <div class="d-flex flex-column justify-content-center">
+            <h1 class="display-4 font-italic" id="board_name" val="kub">{{board_name}} Diary</h1>
+            <form action="/app/v1/it/board/post/posting/{{board_name}}"  id="hidden_form" method="POST">
+                <input type="hidden" id="hidden_board_name" value="{{board_name}}" readonly="readonly">
+                <input type="hidden" id="hidden_current_page" name="hidden_current_page" value="{{current_page}}" readonly="readonly">
+                {{#current_post}}
+                <input type="hidden" id="hidden_id" name="boardId" value="{{id}}" readonly="readonly">
+                <article class="blog-post" id="blog-post">
+                    <hr>
+                    <h2 class="blog-post-title" id="post-title" name="post-title">{{title}}</h2>
+                    <p class="blog-post-meta" name="createdDate">{{createdDate}} by {{author}}</p>
+                    <div id="content" name="content">{{content}}</div>
+                </article>
+                <input type="submit" class="btn btn-primary active" value="Edit" name="submitBtn"/>
+                <a class="btn btn-danger" role="button" data-toggle="modal" data-target="#deleteModal" name="deleteBtn">Delete</a>
+                {{/current_post}}
+            </form>
+            <hr>
+            <table class="table table-hover">
+                <tr class="table-primary">
+                    <th style="width: 5%">#</th>
+                    <th style="width: 50%">Title</th>
+                    <th style="width: 15%">Author</th>
+                    <th style="width: 30%">Updated</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+            <div id="pageDiv">
+            </div>
+            <div class="p-4">
+                <a href="/app/v1/it/board/post/posting/{{board_name}}?page={{current_page}}" class="btn btn-primary active" role="button">Post</a>
+            </div>
+        </div>
+    </div>
+    <!-- dialog box -->
+    <div class="modal" id="deleteModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete post</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Do you want delete post?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="modal-btn-delete" class="btn btn-primary" data-dismiss="modal">Delete post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main><!-- /.container -->
+
+<script src="/app/v1/js/app/board.js"></script>
+<div th:replace="layout/footer :: footer_fragment"></div>
+</body>
+</html>
