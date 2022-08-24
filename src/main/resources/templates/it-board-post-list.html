@@ -5,21 +5,21 @@
 <main class="container">
     <div class="p-4 p-md-5 mb-4 border text-black rounded bg-white">
         <div class="d-flex flex-column justify-content-center">
-            <h1 class="display-4 font-italic" id="board_name" val="kub">{{board_name}} Diary</h1>
-            <form action="/app/v1/it/board/post/posting/{{board_name}}"  id="hidden_form" method="POST">
-                <input type="hidden" id="hidden_board_name" value="{{board_name}}" readonly="readonly">
-                <input type="hidden" id="hidden_current_page" name="hidden_current_page" value="{{current_page}}" readonly="readonly">
-                {{#current_post}}
-                <input type="hidden" id="hidden_id" name="boardId" value="{{id}}" readonly="readonly">
-                <article class="blog-post" id="blog-post">
-                    <hr>
-                    <h2 class="blog-post-title" id="post-title" name="post-title">{{title}}</h2>
-                    <p class="blog-post-meta" name="createdDate">{{createdDate}} by {{author}}</p>
-                    <div id="content" name="content">{{content}}</div>
-                </article>
-                <input type="submit" class="btn btn-primary active" value="Edit" name="submitBtn"/>
-                <a class="btn btn-danger" role="button" data-toggle="modal" data-target="#deleteModal" name="deleteBtn">Delete</a>
-                {{/current_post}}
+            <h1 class="display-4 font-italic" id="board_name" val="kub" th:text="${board_name}"/>
+            <form th:action="'/app/v1/it/board/post/posting/' + ${board_name}"  id="hidden_form" method="POST">
+                <input type="hidden" id="hidden_board_name" th:value="${board_name}" readonly="readonly">
+                <input type="hidden" id="hidden_current_page" name="hidden_current_page" th:value="${current_page}" readonly="readonly">
+                <th:block th:if="${current_post != null}">
+                    <input type="hidden" id="hidden_id" name="boardId" value="{{id}}" readonly="readonly">
+                    <article class="blog-post" id="blog-post">
+                        <hr>
+                        <h2 class="blog-post-title" id="post-title" name="post-title" th:text="${posts.title}"/>
+                        <p class="blog-post-meta" name="createdDate" th:text="${posts.createdDate} + ' by ' + ${posts.author}"/>
+                        <div id="content" name="content" th:text="${posts.content}"/>
+                    </article>
+                    <input type="submit" class="btn btn-primary active" value="Edit" name="submitBtn"/>
+                    <a class="btn btn-danger" role="button" data-toggle="modal" data-target="#deleteModal" name="deleteBtn">Delete</a>
+                </th:block>
             </form>
             <hr>
             <table class="table table-hover">
@@ -58,7 +58,7 @@
     </div>
 </main><!-- /.container -->
 
-<script src="/js/app/board.js"></script>
+<script src="/js/board.js"></script>
 <div th:replace="layout/footer :: footer_fragment"></div>
 </body>
 </html>

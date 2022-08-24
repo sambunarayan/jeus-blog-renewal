@@ -34,7 +34,7 @@ $(document).ready(function(){
     function showPostList(boardName, page, currId) {
         $.ajax({
             type: 'GET',
-            url: '/app/v1/it/board/post/' + boardName +'/page/'+page,
+            url: '/blog-rest/it-bulletin/' + boardName +'/page/'+page,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
         }).done(function(json) {
@@ -48,7 +48,7 @@ $(document).ready(function(){
                 }
                 body += "<tr class='"+ active +"'>";
                 body += "<td>"+ no-- +"</td>";
-                body += "<td><a id='"+ val.id +"' href='/app/v1/it/board/post/list/" + val.boardName
+                body += "<td><a id='"+ val.id +"' href='/it-bulletin/post/list/" + val.boardName
                         + "?bno="+ val.id +"&page=" + page + "'>"+ val.title +"</a></td>";
                 body += "<td>"+ val.author +"</td>";
                 body += "<td>"+ val.createdDate +"</td>";
@@ -77,14 +77,14 @@ $(document).ready(function(){
         var prev = startNum >= 10;
         var page = "<ul class='pagination pull-right'>";
         if (prev) {
-            page += "<li class='page-item'><a class='page-link' href='/app/v1/it/board/post/list/" + boardName + "?page=" + (startNum - 1) + "'>Previous</a></li>";
+            page += "<li class='page-item'><a class='page-link' href='/it-bulletin/post/list/" + boardName + "?page=" + (startNum - 1) + "'>Previous</a></li>";
         }
         for (var i = startNum; i <= endNum; i++) {
             var active = currPageNum == i? "active":"";
-            page+="<li class='page-item " + active +" '><a class='page-link' href='/app/v1/it/board/post/list/" + boardName + "?page=" + i + "'>" + i + "</a></li>";
+            page+="<li class='page-item " + active +" '><a class='page-link' href='/it-bulletin/post/list/" + boardName + "?page=" + i + "'>" + i + "</a></li>";
         }
         if (next) {
-            page+="<li class='page-item'><a class='page-link' href='/app/v1/it/board/post/list/" + boardName + "?page=" + (endNum + 1) + "'>Next</a></li>";
+            page+="<li class='page-item'><a class='page-link' href='/it-bulletin/post/list/" + boardName + "?page=" + (endNum + 1) + "'>Next</a></li>";
         }
         page += "</ul></div>";
         $("#pageDiv").html(page);
@@ -109,7 +109,7 @@ var main = {
             dataType: 'json',
             contentType: 'application/json; charset=utf-8'
         }).done(function() {
-            window.location.href='/app/v1/it/board/post/list/' + boardName + '?page=' + page;
+            window.location.href='/it-bulletin/post/list/' + boardName + '?page=' + page;
         }).fail(function(error) {
             alert(JSON.stringify(error));
         });

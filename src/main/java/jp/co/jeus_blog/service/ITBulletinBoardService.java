@@ -1,6 +1,7 @@
 package jp.co.jeus_blog.service;
 
 import jp.co.jeus_blog.dto.BoardResponseDto;
+import jp.co.jeus_blog.dto.ITPostListDto;
 import jp.co.jeus_blog.dto.PostResponseDto;
 import jp.co.jeus_blog.repository.BoardRepository;
 import jp.co.jeus_blog.repository.PostRepository;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -56,5 +58,29 @@ public class ITBulletinBoardService {
     public PostResponseDto findById(Long id) {
         Post post = postRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("No result record. id = " + id));
         return new PostResponseDto(post);
+    }
+
+    /**
+     *
+     * @param boardName
+     * @param page
+     * @return
+     */
+    @Transactional
+    public ITPostListDto findWithPaging(String boardName, int page) {
+        List<Post> list = postRepository.findByBoardNameDesc(boardName);
+        if (list == null || list.isEmpty()) {
+            return ITPostListDto.builder()
+                    .totalPostNum(0)
+                    .posts(new ArrayList<>())
+                    .build();
+        }
+        int fromIdx = (page - 1) * 10;
+        int toIdx = (page * 10) < list.size() ? (page * 10) : list.size();
+        List<PostResponseDto> currPageList = list.subList(fromIdx, toIdx)
+                .stream()
+                .map(p -> new PostResponseDto(p))
+                .collect(Collectors.toList());
+        return new ITPostListDto(list.size(), currPageList);
     }
 }
