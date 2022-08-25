@@ -36,7 +36,7 @@ $(document).ready(function() {
                 body += "        <h3 class='mb-0'>" + val.title + "</h3>";
                 body += "        <div class='mb-1 text-muted'>" + val.createdDate+ "</div>";
                 body += "        <p class='card-text mb-auto'>" + val.content + "</p>";
-                body += "        <a href='/app/v1/it/board/post/list/" + val.boardName + "?bno=" + val.id + "' class='stretched-link'>Continue";
+                body += "        <a href='/it-bulletin/post/list/" + val.boardName + "?bno=" + val.id + "' class='stretched-link'>Continue";
                 body += "        reading</a>";
                 body += "    </div>";
                 body += "</div>";

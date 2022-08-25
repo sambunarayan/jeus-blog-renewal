@@ -10,12 +10,12 @@
                 <input type="hidden" id="hidden_board_name" th:value="${board_name}" readonly="readonly">
                 <input type="hidden" id="hidden_current_page" name="hidden_current_page" th:value="${current_page}" readonly="readonly">
                 <th:block th:if="${current_post != null}">
-                    <input type="hidden" id="hidden_id" name="boardId" value="{{id}}" readonly="readonly">
+                    <input type="hidden" id="hidden_id" name="boardId" th:value="${current_post.id}" readonly="readonly">
                     <article class="blog-post" id="blog-post">
                         <hr>
-                        <h2 class="blog-post-title" id="post-title" name="post-title" th:text="${posts.title}"/>
-                        <p class="blog-post-meta" name="createdDate" th:text="${posts.createdDate} + ' by ' + ${posts.author}"/>
-                        <div id="content" name="content" th:text="${posts.content}"/>
+                        <h2 class="blog-post-title" id="post-title" name="post-title" th:text="${current_post.title}"/>
+                        <p class="blog-post-meta" name="createdDate" th:text="${current_post.createdDate} + ' by ' + ${current_post.author}"/>
+                        <div id="content" name="content" th:text="${current_post.content}"/>
                     </article>
                     <input type="submit" class="btn btn-primary active" value="Edit" name="submitBtn"/>
                     <a class="btn btn-danger" role="button" data-toggle="modal" data-target="#deleteModal" name="deleteBtn">Delete</a>

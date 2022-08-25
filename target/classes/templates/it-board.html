@@ -13,11 +13,11 @@
         <div class="col-md-6" th:each="board : ${boards}">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2 {{color}}" name="boardName" th:text="${board.BoardName}"/>
+                    <strong class="'d-inline-block mb-2' + ${color}" name="boardName" th:text="${board.BoardName}"/>
                     <h3 class="mb-0" name="board_post" th:text="${board.boardName} + '  post'"/>
                     <div class="mb-1 text-muted" name="createdDate" th:text="${board.createdDate}"/>
                     <p class="card-text mb-auto" name="desc" th:text="${board.description}"/>
-                    <a th:href="'post/list/' + ${board.boardName}" class="stretched-link" name="continue"/> </a>
+                    <a th:href="'/it-bulletin/post/list/' + ${board.boardName}" class="stretched-link" name="continue"/> </a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <svg class="bd-placeholder-img" width="50" height="100" xmlns="http://www.w3.org/2000/svg"
