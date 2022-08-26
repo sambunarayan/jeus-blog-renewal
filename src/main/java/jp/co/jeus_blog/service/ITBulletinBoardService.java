@@ -15,6 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * IT Bulletin board service
+ */
 @Log4j2
 @Service
 public class ITBulletinBoardService {
