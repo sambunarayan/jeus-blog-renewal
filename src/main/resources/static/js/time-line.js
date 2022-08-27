@@ -8,8 +8,11 @@ $(document).ready(function() {
     }
     function showLatestPostList() {
         $(window).scroll(function() {
-            if ($(window).scrollTop() >= $(document).height() - $(window).height() - ($('#footer').height() / 10)) {
+            console.log($('#footer').height());
+//            console.log($(window).scrollTop() + "," +($(document).height() - $(window).height() - ($('#footer').height() / 15)));
+            if ($(window).scrollTop() >= $(document).height() - $(window).height() - ($('#footer').height() / 15)) {
                let currIdx = $("#last_post_id").val();
+
                if (lastIdx != currIdx) {
                   lastIdx = currIdx;
                   addLatestPostList(currIdx);

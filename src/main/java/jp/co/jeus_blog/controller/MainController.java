@@ -24,6 +24,7 @@ public class MainController {
 
     @RequestMapping(value="time-line", method = RequestMethod.GET)
     public String showMainPage(Model model) {
+        log.info("time-line start");
         TimeLineMainPageResponseDto res = new TimeLineMainPageResponseDto();
         res.setLastIndexId(Integer.MAX_VALUE);
         model.addAttribute("timeLine", res);
