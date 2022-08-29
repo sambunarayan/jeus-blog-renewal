@@ -8,7 +8,6 @@ $(document).ready(function() {
     }
     function showLatestPostList() {
         $(window).scroll(function() {
-            console.log($('#footer').height());
             if ($(window).scrollTop() >= $(document).height() - $(window).height() - ($('#footer').height() / 15)) {
                let currIdx = $("#last_post_id").val();
 

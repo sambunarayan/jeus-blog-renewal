@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Log4j2
 @RequestMapping("it-bulletin")
 @Controller
@@ -40,12 +42,22 @@ public class ITBulletinBoardController {
     @GetMapping("/post/list/{boardName}")
     public String board(@PathVariable String boardName, @RequestParam(name = "bno", required = false) Long bno,
                         @RequestParam(name = "page", required = false) Long page, Model model) {
+        List<PostResponseDto> postList = boardService.findByBoardNameDesc(boardName);
         model.addAttribute("board_name", boardName);
-        model.addAttribute("posts", boardService.findByBoardNameDesc(boardName));
+        model.addAttribute("posts", postList);
         if (bno != null) {
             PostResponseDto resDto = boardService.findById(bno);
             if (resDto != null) {
                 model.addAttribute("current_post", new CurrentPostResponseDto(resDto));
+                if (page == null) {
+                    for (int i = 0; i < postList.size(); i++) {
+                        if (postList.get(i).getId() == resDto.getId()) {
+                            page = ((i + 1) / 10L) + 1;
+                            page = (i + 1) % 10L == 0L ? page : page + 1;
+                            break;
+                        }
+                    }
+                }
             }
         }
         model.addAttribute("current_page", page == null ? 1 : page);
