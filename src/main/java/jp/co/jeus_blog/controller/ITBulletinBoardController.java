@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Log4j2
-@RequestMapping("it-bulletin")
+@RequestMapping("blog/it-bulletin")
 @Controller
 public class ITBulletinBoardController {
 
@@ -53,7 +53,10 @@ public class ITBulletinBoardController {
                     for (int i = 0; i < postList.size(); i++) {
                         if (postList.get(i).getId() == resDto.getId()) {
                             page = ((i + 1) / 10L) + 1;
-                            page = (i + 1) % 10L == 0L ? page : page + 1;
+                            long remain = (i + 1) - (page * 10);
+                            if (remain > 0) {
+                                page++;
+                            }
                             break;
                         }
                     }

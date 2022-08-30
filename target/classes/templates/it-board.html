@@ -17,13 +17,13 @@
                     <h3 class="mb-0" name="board_post" th:text="${board.boardName} + '  post'"/>
                     <div class="mb-1 text-muted" name="createdDate" th:text="${board.createdDate}"/>
                     <p class="card-text mb-auto" name="desc" th:text="${board.description}"/>
-                    <a th:href="'/it-bulletin/post/list/' + ${board.boardName}" class="stretched-link" name="continue"/> </a>
+                    <a th:href="'/blog/it-bulletin/post/list/' + ${board.boardName}" class="stretched-link" name="continue"/> </a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <svg class="bd-placeholder-img" width="50" height="100" xmlns="http://www.w3.org/2000/svg"
                          role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
                          focusable="false">
-                        <img class="img-thumbnail border-0 position-absolute top-50 end-0 translate-middle-y" th:src="'/image/logo/' + ${board.logo}">
+                        <img class="img-thumbnail border-0 position-absolute top-50 end-0 translate-middle-y" th:src="'/blog/image/logo/' + ${board.logo}">
                     </svg>
                 </div>
             </div>
@@ -31,7 +31,7 @@
         <div class="col-md-6">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
                 <div class="col-auto p-4 d-flex flex-column position-absolute top-50 start-50 translate-middle">
-                    <a href="it-bulletin/main/register/form" class="stretched-link link-secondary text-decoration-none fs-1">+</a>
+                    <a href="/blog/it-bulletin/main/register/form" class="stretched-link link-secondary text-decoration-none fs-1">+</a>
                 </div>
             </div>
         </div>

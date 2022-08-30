@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Log4j2
-@RequestMapping("image")
+@RequestMapping("blog/image")
 @Controller
 public class ImageLoadController {
 

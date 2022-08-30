@@ -48,7 +48,7 @@ $(document).ready(function(){
                 }
                 body += "<tr class='"+ active +"'>";
                 body += "<td>"+ no-- +"</td>";
-                body += "<td><a id='"+ val.id +"' href='/it-bulletin/post/list/" + val.boardName
+                body += "<td><a id='"+ val.id +"' href='/blog/it-bulletin/post/list/" + val.boardName
                         + "?bno="+ val.id +"&page=" + page + "'>"+ val.title +"</a></td>";
                 body += "<td>"+ val.author +"</td>";
                 body += "<td>"+ val.createdDate +"</td>";
@@ -77,14 +77,14 @@ $(document).ready(function(){
         var prev = startNum >= 10;
         var page = "<ul class='pagination pull-right'>";
         if (prev) {
-            page += "<li class='page-item'><a class='page-link' href='/it-bulletin/post/list/" + boardName + "?page=" + (startNum - 1) + "'>Previous</a></li>";
+            page += "<li class='page-item'><a class='page-link' href='/blog/it-bulletin/post/list/" + boardName + "?page=" + (startNum - 1) + "'>Previous</a></li>";
         }
         for (var i = startNum; i <= endNum; i++) {
             var active = currPageNum == i? "active":"";
-            page+="<li class='page-item " + active +" '><a class='page-link' href='/it-bulletin/post/list/" + boardName + "?page=" + i + "'>" + i + "</a></li>";
+            page+="<li class='page-item " + active +" '><a class='page-link' href='/blog/it-bulletin/post/list/" + boardName + "?page=" + i + "'>" + i + "</a></li>";
         }
         if (next) {
-            page+="<li class='page-item'><a class='page-link' href='/it-bulletin/post/list/" + boardName + "?page=" + (endNum + 1) + "'>Next</a></li>";
+            page+="<li class='page-item'><a class='page-link' href='/blog/it-bulletin/post/list/" + boardName + "?page=" + (endNum + 1) + "'>Next</a></li>";
         }
         page += "</ul></div>";
         $("#pageDiv").html(page);
