@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 
 @Log4j2
@@ -50,20 +51,33 @@ public class ITBulletinBoardController {
             if (resDto != null) {
                 model.addAttribute("current_post", new CurrentPostResponseDto(resDto));
                 if (page == null) {
-                    for (int i = 0; i < postList.size(); i++) {
-                        if (postList.get(i).getId() == resDto.getId()) {
-                            page = ((i + 1) / 10L) + 1;
-                            long remain = (i + 1) - (page * 10);
-                            if (remain > 0) {
-                                page++;
-                            }
-                            break;
-                        }
+                    int idx = binarySearch(postList, 0, postList.size(), resDto.getId());
+                    page = ((idx + 1) / 10L) + 1;
+                    long remain = (idx + 1) - (page * 10);
+                    if (remain > 0) {
+                        page++;
                     }
                 }
             }
         }
         model.addAttribute("current_page", page == null ? 1 : page);
         return "it-board-post-list";
+    }
+
+    private int binarySearch(List<PostResponseDto> list, int s, int e, long id) {
+        if (s > e) {
+            return -1;
+        }
+        int mid = (s + e) / 2;
+        if (list.get(mid).getId() == id) {
+            return mid;
+        } else {
+            int idx = binarySearch(list, s, mid - 1, id);
+            if (idx == -1) {
+                return binarySearch(list, mid + 1, e, id);
+            } else {
+                return idx;
+            }
+        }
     }
 }
