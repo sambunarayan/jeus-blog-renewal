@@ -5,7 +5,7 @@
 <main class="container">
     <div class="p-4 p-md-5 mb-4 border text-black rounded bg-white">
         <div class="d-flex flex-column justify-content-center">
-            <h1 class="display-4 font-italic" id="board_name" val="kub" th:text="${board_name}"/>
+            <h1 class="display-4 font-italic" id="board_name" th:text="${board_name}"/>
             <form th:action="'/app/v1/it/board/post/posting/' + ${board_name}"  id="hidden_form" method="POST">
                 <input type="hidden" id="hidden_board_name" th:value="${board_name}" readonly="readonly">
                 <input type="hidden" id="hidden_current_page" name="hidden_current_page" th:value="${current_page}" readonly="readonly">

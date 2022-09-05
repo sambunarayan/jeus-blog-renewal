@@ -44,16 +44,16 @@ public class ITBulletinBoardController {
     @GetMapping("/post/list/{boardName}")
     public String board(@PathVariable String boardName, @RequestParam(name = "bno", required = false) Long bno,
                         @RequestParam(name = "page", required = false) Long page, Model model) {
+        log.info("{}-bno[{}]-page[{}]", boardName, bno, page);
         List<PostResponseDto> postList = boardService.findByBoardNameDesc(boardName);
         model.addAttribute("board_name", boardName);
-        model.addAttribute("posts", postList);
         if (bno != null) {
             PostResponseDto resDto = boardService.findById(bno);
             if (resDto != null) {
                 model.addAttribute("current_post", new CurrentPostResponseDto(resDto));
                 if (page == null) {
                     int idx = binarySearch(postList, 0, postList.size(), resDto.getId());
-                    page = ((idx + 1) / 10L) + 1;
+                    page = ((idx) / 10L) + 1;
                     long remain = (idx + 1) - (page * 10);
                     if (remain > 0) {
                         page++;

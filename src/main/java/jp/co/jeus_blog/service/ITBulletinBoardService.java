@@ -78,6 +78,7 @@ public class ITBulletinBoardService {
                     .posts(new ArrayList<>())
                     .build();
         }
+        // paging
         int fromIdx = (page - 1) * 10;
         int toIdx = (page * 10) < list.size() ? (page * 10) : list.size();
         List<PostResponseDto> currPageList = list.subList(fromIdx, toIdx)
