@@ -56,4 +56,5 @@ public class ImageLoadController {
     public ListenableFuture<HttpEntity<byte[]>> getLogo(@PathVariable("logo") final String logo) {
         return taskExecutor.submitListenable(() -> imageLoadService.getLogo(logo));
     }
+
 }

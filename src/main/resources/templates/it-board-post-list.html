@@ -6,18 +6,18 @@
     <div class="p-4 p-md-5 mb-4 border text-black rounded bg-white">
         <div class="d-flex flex-column justify-content-center">
             <h1 class="display-4 font-italic" id="board_name" th:text="${board_name}"/>
-            <form th:action="'/app/v1/it/board/post/posting/' + ${board_name}"  id="hidden_form" method="POST">
-                <input type="hidden" id="hidden_board_name" th:value="${board_name}" readonly="readonly">
-                <input type="hidden" id="hidden_current_page" name="hidden_current_page" th:value="${current_page}" readonly="readonly">
+            <form th:action="'/blog/it-bulletin/post/form/' + ${board_name}"  id="hidden_form" method="GET">
+                <input type="hidden" id="boardName" th:value="${board_name}" readonly="readonly">
+                <input type="hidden" id="page" name="page" th:value="${current_page}" readonly="readonly">
                 <th:block th:if="${current_post != null}">
-                    <input type="hidden" id="hidden_id" name="boardId" th:value="${current_post.id}" readonly="readonly">
+                    <input type="hidden" id="bno" name="bno" th:value="${current_post.id}" readonly="readonly">
                     <article class="blog-post" id="blog-post">
                         <hr>
                         <h2 class="blog-post-title" id="post-title" name="post-title" th:text="${current_post.title}"/>
                         <p class="blog-post-meta" name="createdDate" th:text="${current_post.createdDate} + ' by ' + ${current_post.author}"/>
                         <div id="content" name="content" th:text="${current_post.content}"/>
                     </article>
-                    <input type="submit" class="btn btn-primary active" value="Edit" name="submitBtn"/>
+                    <input type="submit" class="btn btn-primary active" value="Edit"/>
                     <a class="btn btn-danger" role="button" data-toggle="modal" data-target="#deleteModal" name="deleteBtn">Delete</a>
                 </th:block>
             </form>
@@ -35,7 +35,7 @@
             <div id="pageDiv">
             </div>
             <div class="p-4">
-                <a href="/app/v1/it/board/post/posting/{{board_name}}?page={{current_page}}" class="btn btn-primary active" role="button">Post</a>
+                <a th:href="'/blog/it-bulletin/post/form/' + ${board_name} + '?page=' + ${current_page}" class="btn btn-primary active" role="button">Post</a>
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@
     </div>
 </main><!-- /.container -->
 
-<script src="/js/board.js"></script>
+<script src="/js/it-board.js"></script>
 <div th:replace="layout/footer :: footer_fragment"></div>
 </body>
 </html>

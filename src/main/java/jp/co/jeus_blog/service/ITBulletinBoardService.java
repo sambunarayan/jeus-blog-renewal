@@ -24,8 +24,6 @@ public class ITBulletinBoardService {
 
     @Autowired
     private BoardRepository boardRepository;
-    @Autowired
-    private PostRepository postRepository;
 
     /**
      * Returns all board data.
@@ -40,51 +38,4 @@ public class ITBulletinBoardService {
                 .collect(Collectors.toList());
     }
 
-    /**
-     *
-     * @param boardName
-     * @return
-     */
-    @Transactional
-    public List<PostResponseDto> findByBoardNameDesc(String boardName) {
-        return postRepository.findByBoardNameDesc(boardName).stream()
-                .map(p -> new PostResponseDto(p))
-                .collect(Collectors.toList());
-    }
-
-    /**
-     *
-     * @param id
-     * @return
-     */
-    @Transactional
-    public PostResponseDto findById(Long id) {
-        Post post = postRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("No result record. id = " + id));
-        return new PostResponseDto(post);
-    }
-
-    /**
-     *
-     * @param boardName
-     * @param page
-     * @return
-     */
-    @Transactional
-    public ITPostListDto findWithPaging(String boardName, int page) {
-        List<Post> list = postRepository.findByBoardNameDesc(boardName);
-        if (list == null || list.isEmpty()) {
-            return ITPostListDto.builder()
-                    .totalPostNum(0)
-                    .posts(new ArrayList<>())
-                    .build();
-        }
-        // paging
-        int fromIdx = (page - 1) * 10;
-        int toIdx = (page * 10) < list.size() ? (page * 10) : list.size();
-        List<PostResponseDto> currPageList = list.subList(fromIdx, toIdx)
-                .stream()
-                .map(p -> new PostResponseDto(p))
-                .collect(Collectors.toList());
-        return new ITPostListDto(list.size(), currPageList);
-    }
 }

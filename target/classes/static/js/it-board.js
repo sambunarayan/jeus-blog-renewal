@@ -25,8 +25,8 @@ $(document).ready(function(){
     function list() {
 
         var regForm = $("#hidden_form");
-        showPostList(regForm.find('#hidden_board_name').val(),
-            regForm.find('#hidden_current_page').val(), regForm.find('#hidden_id').val());
+        showPostList(regForm.find('#boardName').val(),
+            regForm.find('#page').val(), regForm.find('#bno').val());
     }
     /**
      * Show post list
@@ -99,9 +99,9 @@ var main = {
         });
     },
     delete : function() {
-        var id = $('#hidden_id').val();
-        var boardName = $('#hidden_board_name').val();
-        var page = $('#hidden_current_page').val();
+        var id = $('#bno').val();
+        var boardName = $('#boardName').val();
+        var page = $('#page').val();
 
         $.ajax({
             type: 'DELETE',
