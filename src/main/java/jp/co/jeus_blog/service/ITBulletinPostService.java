@@ -1,7 +1,7 @@
 package jp.co.jeus_blog.service;
 
 import jp.co.jeus_blog.dto.ITPostListDto;
-import jp.co.jeus_blog.dto.ITPostRegisterFormResponseDto;
+import jp.co.jeus_blog.dto.ITPostRegisterFormDto;
 import jp.co.jeus_blog.dto.PostResponseDto;
 import jp.co.jeus_blog.repository.PostRepository;
 import jp.co.jeus_blog.repository.entity.Post;
@@ -67,12 +67,20 @@ public class ITBulletinPostService {
     }
 
     @Transactional
-    public Long saveToPost(ITPostRegisterFormResponseDto requestDto) {
+    public Long saveToPost(ITPostRegisterFormDto requestDto) {
         return postRepository.save(Post.builder()
+                .id(requestDto.getId())
                 .title(requestDto.getTitle())
                 .boardName(requestDto.getBoardName())
                 .author("Administer")
                 .content(requestDto.getContent())
                 .build()).getId();
+    }
+
+    @Transactional
+    public void deletePost(long id) {
+        Post postEntity = postRepository.findById(id).orElseThrow();
+        postRepository.delete(postEntity);
+        log.info("Post[{}] deleted.", postEntity.getId());
     }
 }

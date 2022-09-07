@@ -105,11 +105,11 @@ var main = {
 
         $.ajax({
             type: 'DELETE',
-            url: '/app/v1/it/board/post/delete/post/' + id,
+            url: '/blog-rest/it-bulletin/' + boardName + "/delete/"+ id,
             dataType: 'json',
             contentType: 'application/json; charset=utf-8'
         }).done(function() {
-            window.location.href='/it-bulletin/post/list/' + boardName + '?page=' + page;
+            window.location.href='/blog/it-bulletin/post/list/' + boardName + '?page=' + page;
         }).fail(function(error) {
             alert(JSON.stringify(error));
         });

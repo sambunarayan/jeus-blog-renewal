@@ -1,8 +1,7 @@
 package jp.co.jeus_blog.controller;
 
 import jp.co.jeus_blog.dto.CurrentPostResponseDto;
-import jp.co.jeus_blog.dto.ITPostRegisterFormResponseDto;
-import jp.co.jeus_blog.dto.ITPostRegisterRequestDto;
+import jp.co.jeus_blog.dto.ITPostRegisterFormDto;
 import jp.co.jeus_blog.dto.PostResponseDto;
 import jp.co.jeus_blog.service.ITBulletinPostService;
 import jp.co.jeus_blog.utils.PostSearchUtil;
@@ -30,10 +29,10 @@ public class ITBulletinPostController {
                               @RequestParam(name = "page", required = false) String page,
                               Model model) {
         log.info("{}-bno:{},page:{}", boardName, bno, page);
-        ITPostRegisterFormResponseDto responseDto = new ITPostRegisterFormResponseDto();
+        ITPostRegisterFormDto responseDto = new ITPostRegisterFormDto();
         if (bno != null) {
             PostResponseDto post = postService.findById(Long.valueOf(bno));
-            responseDto = new ITPostRegisterFormResponseDto(post);
+            responseDto = new ITPostRegisterFormDto(post);
         }
         responseDto.setBoardName(boardName);
         responseDto.setCurrentPage(page);
@@ -75,25 +74,18 @@ public class ITBulletinPostController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String posting(ITPostRegisterFormResponseDto requestDto) {
-        log.info("New post to {} with [{}] title.", requestDto.getBoardName(), requestDto.getTitle());
-        PostResponseDto post = null;
-        String currPage = "&page=1";
-        long postId = postService.saveToPost(requestDto);
+    public String posting(ITPostRegisterFormDto requestDto) {
+        long postId = 0l;
+        String currPage = "&page=";
+        if (requestDto.getId() != null) {
+            log.info("Update post. [id={}]", requestDto.getId());
+            currPage += requestDto.getCurrentPage();
+        } else {
+            log.info("New post to {} with [{}] title.", requestDto.getBoardName(), requestDto.getTitle());
+            currPage += "1";
+        }
+        postId = postService.saveToPost(requestDto);
         return "redirect:/blog/it-bulletin/post/list/" + requestDto.getBoardName() + "?bno=" + postId + currPage;
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.PUT)
-    public String updatePost(ITPostRegisterFormResponseDto requestDto) {
-        log.info("Update post to {} with [{}] title.", requestDto.getBoardName(), requestDto.getTitle());
-        PostResponseDto post = null;
-        String currPage = "&page=";
-        currPage += requestDto.getCurrentPage();
-//        post = postService.update(PostSaveRequestDto.builder()
-//                .id(Long.parseLong(formData.get("id")))
-//                .title(formData.get("title"))
-//                .content(formData.get("content"))
-//                .build());
-        return "redirect:/it/board/post/list/" + requestDto.getBoardName() + "?bno=" + requestDto.getId() + currPage;
-    }
 }

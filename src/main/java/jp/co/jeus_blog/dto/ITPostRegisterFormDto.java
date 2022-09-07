@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-public class ITPostRegisterFormResponseDto {
+public class ITPostRegisterFormDto {
 
     private Long id;
     private String boardName;
@@ -16,7 +16,7 @@ public class ITPostRegisterFormResponseDto {
     private String author;
     private String currentPage;
 
-    public ITPostRegisterFormResponseDto(PostResponseDto post) {
+    public ITPostRegisterFormDto(PostResponseDto post) {
         this.id = post.getId();
         this.boardName = post.getBoardName();
         this.title = post.getTitle();
