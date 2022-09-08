@@ -15,6 +15,31 @@
         <java.version>11</java.version>
         <log4j>2.18.0</log4j>
     </properties>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/man/resources</directory>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+        <profile>
+            <id>staging</id>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/man/resources</directory>
+                    </resource>
+                    <resource>
+                        <directory>src/main/resources.staging</directory>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>

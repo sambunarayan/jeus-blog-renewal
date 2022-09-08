@@ -10,14 +10,17 @@
         </div>
     </div>
     <div class="row mb-2">
+        <div class="d-grid gap-2 d-md-block">
+            <button type="button" class="btn btn-outline-primary invisible" onclick="clickClose()">Edit</button>
+        </div>
         <div class="col-md-6" th:each="board : ${boards}">
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2" th:classappend="${board.color}" name="boardName" th:text="${board.BoardName}"/>
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" id="card_div">
+                <div class="col p-4 d-flex flex-column position-relative" th:name="'div_' + ${board.boardName}">
+                    <strong class="d-inline-block mb-2" th:classappend="${board.color}" id="boardName" name="boardName" th:text="${board.BoardName}"/>
                     <h3 class="mb-0" name="board_post" th:text="${board.boardName} + '  post'"/>
                     <div class="mb-1 text-muted" name="createdDate" th:text="${board.createdDate}"/>
                     <p class="card-text mb-auto" name="desc" th:text="${board.description}"/>
-                    <a th:href="'/blog/it-bulletin/post/list/' + ${board.boardName}" class="stretched-link" name="continue"/> </a>
+                    <a th:href="'/blog/it-bulletin/post/list/' + ${board.boardName}" class="stretched-link" id="continue" name="continue"/> </a>
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <svg class="bd-placeholder-img" width="50" height="100" xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +28,9 @@
                          focusable="false">
                         <img class="img-thumbnail border-0 position-absolute top-50 end-0 translate-middle-y" th:src="'/blog/image/logo/' + ${board.logo}">
                     </svg>
+                </div>
+                <div class="col-auto p-4 d-flex flex-column position-absolute top-50 start-50 translate-middle card-img-overlay">
+                    <button type="button" id="closeBtn" class="btn-close position-absolute top-50 start-50 translate-middle invisible" onclick="clickClose()"></button>
                 </div>
             </div>
         </div>
@@ -38,6 +44,7 @@
     </div>
 
 </main><!-- /.container -->
+<script src="/js/it-board-del.js"></script>
 <div th:replace="layout/footer :: footer_fragment"></div>
 </body>
 </html>
