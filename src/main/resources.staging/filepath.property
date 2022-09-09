@@ -1,4 +1,4 @@
-default.filepath=D:\\upload
-image.filepath=D:\\upload
-logo.image.filepath=D:\\upload\\logo
+default.filepath=/audit
+image.filepath=/audit/images
+logo.image.filepath=/audit/images/logo
 logo.image.default=default
