@@ -18,10 +18,16 @@
     <profiles>
         <profile>
             <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <build>
                 <resources>
                     <resource>
-                        <directory>src/man/resources</directory>
+                        <directory>src/main/resources</directory>
+                    </resource>
+                    <resource>
+                        <directory>src/main/resources.dev</directory>
                     </resource>
                 </resources>
             </build>
@@ -31,7 +37,7 @@
             <build>
                 <resources>
                     <resource>
-                        <directory>src/man/resources</directory>
+                        <directory>src/main/resources</directory>
                     </resource>
                     <resource>
                         <directory>src/main/resources.staging</directory>
