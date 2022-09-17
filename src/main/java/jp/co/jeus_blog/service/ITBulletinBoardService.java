@@ -40,6 +40,12 @@ public class ITBulletinBoardService {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Save new board
+     *
+     * @param form
+     * @param logoName
+     */
     @Transactional
     public void saveToBoard(ITBoardRegisterFormDto form, String logoName) {
         Board boardEntity = boardRepository.save(Board.builder()
