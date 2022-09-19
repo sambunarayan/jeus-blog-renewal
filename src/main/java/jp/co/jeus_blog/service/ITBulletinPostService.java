@@ -66,6 +66,12 @@ public class ITBulletinPostService {
         return new ITPostListDto(list.size(), currPageList);
     }
 
+    /**
+     * Save post
+     *
+     * @param requestDto
+     * @return
+     */
     @Transactional
     public Long saveToPost(ITPostRegisterFormDto requestDto) {
         return postRepository.save(Post.builder()
@@ -77,6 +83,11 @@ public class ITBulletinPostService {
                 .build()).getId();
     }
 
+    /**
+     * Delete post
+     *
+     * @param id
+     */
     @Transactional
     public void deletePost(long id) {
         Post postEntity = postRepository.findById(id).orElseThrow();
