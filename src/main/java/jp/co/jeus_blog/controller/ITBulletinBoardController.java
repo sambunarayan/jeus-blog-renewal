@@ -36,12 +36,25 @@ public class ITBulletinBoardController {
         return "it-board";
     }
 
+    /**
+     * Get IT board register page
+     *
+     * @param model
+     * @return String page name
+     */
     @GetMapping(value="board/register")
     public String getBoardRegister(Model model) {
         model.addAttribute("form", new ITBoardRegisterFormDto());
         return "it-board-register";
     }
 
+    /**
+     * Register new board
+     *
+     * @param multipartFile MultipartFile
+     * @param form ITBoardRegisterFormDto
+     * @return String board maing page name
+     */
     @PostMapping(value="board/register")
     public String register(@RequestPart("logoFile") MultipartFile multipartFile, ITBoardRegisterFormDto form) {
         log.info("Create new board. [{}]", form.getBoardName());
