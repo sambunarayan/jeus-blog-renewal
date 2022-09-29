@@ -6,6 +6,15 @@ import java.util.List;
 
 public final class PostSearchUtil {
 
+    /**
+     * binary search for PostResponseDto
+     *
+     * @param list PostResponseDto list
+     * @param s start
+     * @param e end
+     * @param id target ID
+     * @return int index
+     */
     public static int binarySearch(List<PostResponseDto> list, int s, int e, long id) {
         if (s > e) {
             return -1;
