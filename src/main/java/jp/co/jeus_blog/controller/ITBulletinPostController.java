@@ -23,6 +23,15 @@ public class ITBulletinPostController {
     @Autowired
     private ITBulletinPostService postService;
 
+    /**
+     * Get post form
+     *
+     * @param boardName board name
+     * @param bno board number
+     * @param page page
+     * @param model Model
+     * @return page of post registration
+     */
     @RequestMapping(value = "/form/{board_name}", method = RequestMethod.GET)
     public String getPostForm(@PathVariable("board_name") String boardName,
                               @RequestParam(name = "bno", required = false) String bno,
