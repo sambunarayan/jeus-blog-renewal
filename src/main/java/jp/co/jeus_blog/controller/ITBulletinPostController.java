@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * IT Bulletin post controller
+ */
 @Log4j2
 @RequestMapping("blog/it-bulletin/post")
 @Transactional
