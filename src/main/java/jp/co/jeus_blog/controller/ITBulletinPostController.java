@@ -85,6 +85,12 @@ public class ITBulletinPostController {
         return "it-board-post-list";
     }
 
+    /**
+     * Register post
+     *
+     * @param requestDto
+     * @return redirect post list page
+     */
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String posting(ITPostRegisterFormDto requestDto) {
         long postId = 0l;
