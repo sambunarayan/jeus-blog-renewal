@@ -1,219 +1,247 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta property='og:type' content='website'>
-  <meta property='og:title' content='Jaewoo Kim ポートフォリオ'>
-  <meta property='og:url' content='URLが入る'>
-  <meta property='og:description' content='Jaewoo Kimのポートフォリオサイトです。'>
-  <meta property="og:image" content="/img/ogp.png">
-  <meta name="description" content="Jaewoo Kimのポートフォリオサイトです" />
-  <title>Jaewoo Kim ポートフォリオ</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="/css/style.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="/css/custom.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="/img/favicon.ico" />
-  <link rel=”canonical” href=”URLが入る” />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property='og:type' content='website'>
+    <meta property='og:title' content='Jaewoo Kim ポートフォリオ'>
+    <meta property='og:url' content='URLが入る'>
+    <meta property='og:description' content='Jaewoo Kimのポートフォリオサイトです。'>
+    <meta property="og:image" content="/img/ogp.png">
+    <meta name="description" content="Jaewoo Kimのポートフォリオサイトです"/>
+    <title>Jaewoo Kim ポートフォリオ</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="/css/style.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="/css/custom.css" media="all" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="/img/favicon.ico"/>
+    <link rel=”canonical” href=”URLが入る”/>
 </head>
 
 <body>
-  <div class="wrapper">
+<div class="wrapper">
 
     <!-- header -->
     <header class="header ">
-      <div class="container">
-        <h1 class="header-logo">
-          <a href="#">Jaewoo Kim</a>
-        </h1>
-        <nav class="gnav">
-          <ul class="gnav-list">
-            <li class="gnav-item"><a href="#project">PROJECT</a></li>
-            <li class="gnav-item"><a href="#skill">SKILL</a></li>
-            <li class="gnav-item"><a href="#about">ABOUT</a></li>
-            <li class="gnav-item"><a href="#contact">CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="container">
+            <h1 class="header-logo">
+                <a href="#">Jaewoo Kim</a>
+            </h1>
+            <nav class="gnav">
+                <ul class="gnav-list">
+                    <li class="gnav-item"><a href="#project">PROJECT</a></li>
+                    <li class="gnav-item"><a href="#skill">SKILL</a></li>
+                    <li class="gnav-item"><a href="#about">ABOUT</a></li>
+                    <li class="gnav-item"><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <!-- /header -->
 
     <main class="content">
 
-      <!-- mv -->
-      <div class="mv">
-        <div class="mv-container">
-          <p class="mv-title">Jaewoo Kim</p>
-          <p class="mv-subtitle">PORTFOLIO</p>
-          <p class="mv-text" th:text="#{portfolio.mv.text}">
-          </p>
+        <!-- mv -->
+        <div class="mv">
+            <div class="mv-container">
+                <p class="mv-title">Jaewoo Kim</p>
+                <p class="mv-subtitle">PORTFOLIO</p>
+                <p class="mv-text" th:text="#{portfolio.mv.text}">
+                </p>
+            </div>
         </div>
-      </div>
-      <!-- /mv -->
+        <!-- /mv -->
 
-      <!-- Custom -->
-      <section class="Projects section" id="custom">
-        <div class="container">
-          <h2 class="title">CUSTOM</h2>
-          <div class="cards">
-            <div class="card card-1">
-              <div class="card__icon"><i class="fas fa-bolt"></i></div>
-              <p class="card__exit"><i class="fas fa-times"></i></p>
-              <h2 class="card__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-              <p class="card__apply">
-                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
-              </p>
+        <!-- Custom -->
+        <section class="Projects section" id="custom">
+            <div class="container">
+                <h2 class="title">CUSTOM</h2>
+                <div class="cards">
+                    <div class="card card-1">
+                        <div class="card__icon"><i class="fas fa-bolt"></i></div>
+                        <p class="card__exit"><i class="fas fa-times"></i></p>
+                        <h2 class="card__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                        <p class="card__apply">
+                            <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div class="card card-2">
+                        <div class="card__icon"><i class="fas fa-bolt"></i></div>
+                        <p class="card__exit"><i class="fas fa-times"></i></p>
+                        <h2 class="card__title">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+                        <p class="card__apply">
+                            <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                    <div class="card card-3">
+                        <div class="card__icon"><i class="fas fa-bolt"></i></div>
+                        <p class="card__exit"><i class="fas fa-times"></i></p>
+                        <h2 class="card__title">Ut enim ad minim veniam.</h2>
+                        <p class="card__apply">
+                            <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="card card-2">
-              <div class="card__icon"><i class="fas fa-bolt"></i></div>
-              <p class="card__exit"><i class="fas fa-times"></i></p>
-              <h2 class="card__title">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-              <p class="card__apply">
-                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
-              </p>
-            </div>
-            <div class="card card-3">
-              <div class="card__icon"><i class="fas fa-bolt"></i></div>
-              <p class="card__exit"><i class="fas fa-times"></i></p>
-              <h2 class="card__title">Ut enim ad minim veniam.</h2>
-              <p class="card__apply">
-                <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
-              </p>
-            </div>
-        </div>
-      </section>
-      <!-- /Projects -->
+        </section>
+        <!-- /Projects -->
 
-      <!-- Projects -->
-      <section class="Projects section" id="project">
-        <div class="container">
-          <h2 class="title">PROJECT</h2>
-          <div class="projects-list">
-            <a class="projects-item" href="projects-template.html">
-              <div class="projects-img"><img src="/img/works-sample-thumb.jpg" alt="" /></div>
-              <p class="projects-name">作品名が入る</p>
-              <p class="projects-info">Design / Coding(Responsive)</p>
-            </a>
-            <a class="projects-item" href="projects-template.html">
-              <div class="projects-img"><img src="/img/works-dummy-thumb.jpg" alt="" /></div>
-              <p class="projects-name">作品名が入る</p>
-              <p class="projects-info">Design / Coding(Responsive) / WordPress</p>
-            </a>
-          </div>
-        </div>
-      </section>
-      <!-- /Projects -->
+        <!-- Skill-Custom -->
+        <section class="ck" id="skill-custom">
+            <div class="ck-container">
+                <h2 class="title">SKILL CUSTOM</h2>
+                <div class="skill-cards">
+                    <div class="card card-white">
 
-      <!-- skill -->
-      <section class="skill section" id="skill">
-        <div class="container">
-          <h2 class="title">SKILL</h2>
-          <div class="skill-list">
-            <div class="skill-item">
-              <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">Java</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">Spring/Spring boot</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">JavaScript</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">Kubernetes</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">Illustrator</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-            <div class="skill-item">
-              <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
-              <div class="skill-body">
-                <h3 class="skill-name">AWS</h3>
-                <p class="skill-text">
-                  テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /skill -->
+                        <div class="card__icon"><div class="ck-img"><img src="/img/works-sample-thumb.jpg" alt=""/></div></div>
 
-      <!-- about -->
-      <section class="about section" id="about">
-        <div class="container">
-          <h2 class="title">ABOUT</h2>
-          <div class="profile">
-            <p class="profile-img">
-              <img src="/img/profile.jpg" alt="">
-            </p>
-            <div class="profile-body">
-              <p>
-                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
-              </p>
-              <p>
-                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /about -->
+                    </div>
+                    <div class="card card-2">
+                        <h2 class="card__title">
+                        a<br>
+                        a<br>
+                        a<br>
+                        a<br>
+                        a<br>
+                        a<br>
 
-      <!-- contact -->
-      <section class="contact section" id="contact">
-        <div class="container">
-          <h2 class="title">CONTACT</h2>
-          <p class="lead">
-            お問い合わせは、<br class="sp-only">SNSかメールにてお願いいたします。
-          </p>
-          <div class="contact-list">
-            <a class="contact-item" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
-            <a class="contact-item" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
-            <span class="contact-item">soyou30257@gmail.com</span>
-          </div>
+
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="Projects section" id="project">
+            <div class="container">
+                <h2 class="title">PROJECT</h2>
+                <div class="projects-list">
+                    <a class="projects-item" href="projects-template.html">
+                        <div class="projects-img"><img src="/img/works-sample-thumb.jpg" alt=""/></div>
+                        <p class="projects-name">作品名が入る</p>
+                        <p class="projects-info">Design / Coding(Responsive)</p>
+                    </a>
+                    <a class="projects-item" href="projects-template.html">
+                        <div class="projects-img"><img src="/img/works-dummy-thumb.jpg" alt=""/></div>
+                        <p class="projects-name">作品名が入る</p>
+                        <p class="projects-info">Design / Coding(Responsive) / WordPress</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- /Projects -->
+
+        <!-- skill -->
+        <section class="skill section" id="skill">
+            <div class="container">
+                <h2 class="title">SKILL</h2>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
+                        <div class="skill-body">
+                            <h3 class="skill-name">Java</h3>
+                            <p class="skill-text">
+                                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
+                        <div class="skill-body">
+                            <h3 class="skill-name">Spring/Spring boot</h3>
+                            <p class="skill-text">
+                                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
+                        <div class="skill-body">
+                            <h3 class="skill-name">JavaScript</h3>
+                            <p class="skill-text">
+                                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
+                        <div class="skill-body">
+                            <h3 class="skill-name">Kubernetes</h3>
+                            <p class="skill-text">
+                                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
+                        <div class="skill-body">
+                            <h3 class="skill-name">Illustrator</h3>
+                            <p class="skill-text">
+                                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <p class="skill-img"><img src="/img/icon_skill.png" alt=""></p>
+                        <div class="skill-body">
+                            <h3 class="skill-name">AWS</h3>
+                            <p class="skill-text">
+                                テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /skill -->
+
+        <!-- about -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="title">ABOUT</h2>
+                <div class="profile">
+                    <p class="profile-img">
+                        <img src="/img/profile.jpg" alt="">
+                    </p>
+                    <div class="profile-body">
+                        <p>
+                            テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+                        </p>
+                        <p>
+                            テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /about -->
+
+        <!-- contact -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="title">CONTACT</h2>
+                <p class="lead">
+                    お問い合わせは、<br class="sp-only">SNSかメールにてお願いいたします。
+                </p>
+                <div class="contact-list">
+                    <a class="contact-item" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
+                    <a class="contact-item" href="https://www.instagram.com/" target="_blank"
+                       rel="noopener">Instagram</a>
+                    <span class="contact-item">soyou30257@gmail.com</span>
+                </div>
+            </div>
+        </section>
+        <!-- /contact -->
+        <div class="page-top" id="js-page-top">
+            <span class="material-icons-outlined">expand_less</span>
         </div>
-      </section>
-      <!-- /contact -->
-      <div class="page-top" id="js-page-top">
-        <span class="material-icons-outlined">expand_less</span>
-      </div>
     </main>
 
     <!-- footer -->
     <footer class="footer">
-      <div class="copyright">&copy;Jaewoo Kim</div>
+        <div class="copyright">&copy;Jaewoo Kim</div>
     </footer>
     <!-- /footer -->
 
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type='text/javascript' src="/js/script.js"></script>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type='text/javascript' src="/js/script.js"></script>
 </body>
 </html>

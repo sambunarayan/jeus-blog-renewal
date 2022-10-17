@@ -37,6 +37,10 @@ img {
   padding: 90px 0;
 }
 
+.wide-section {
+  padding: 150px 0;
+}
+
 .section:nth-of-type(odd) {
   background-color: #f7f7f7;
 }
@@ -167,6 +171,23 @@ img {
 .mv-text {
   font-size: 16px;
   line-height: 1.8;
+}
+
+/*--------------------------------
+ Custom-skill
+---------------------------------*/
+.ck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  text-align: center;
+}
+.ck-container {
+  padding: 0 100px;
+}
+.ck-img img {
+  border: 1px solid #e6e6e6;
 }
 
 /*--------------------------------
