@@ -34,7 +34,8 @@ img {
 }
 
 .section {
-  padding: 90px 0;
+  display: flex;
+  margin-bottom: 30px;
 }
 
 .wide-section {
@@ -54,10 +55,15 @@ img {
 /*--------------------------------
  見出し
 ---------------------------------*/
+.title-div {
+ border-bottom: 3px;
+ border-bottom-color: #000000;
+}
 .title {
   font-size: 34px;
   font-weight: bold;
   line-height: 1;
+  margin-top: 40px;
   margin-bottom: 40px;
   text-align: center;
   letter-spacing: .05em;
@@ -176,20 +182,16 @@ img {
 /*--------------------------------
  Custom-skill
 ---------------------------------*/
-.ck {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
+.ck-title {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
+  letter-spacing: .05em;
+  color: #333;
 }
-.ck-container {
-  padding: 0 100px;
-}
-.ck-img img {
-  border: 1px solid #e6e6e6;
-}
-
 /*--------------------------------
  Projects
 ---------------------------------*/
