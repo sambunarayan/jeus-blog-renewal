@@ -154,13 +154,20 @@
 }
 
 .card-project {
-  background: radial-gradient(#ffffff, #ffffff);
-  padding: 10px 10px;
-  margin: 15px 15px;
-  width: auto;
-  align-items: center;
+  height: 100vh;
+  width: 100%;
   text-align: center;
-  display: inline-block;
+  display: flex;
+  align-items: flex;
+  justify-content: center;
+}
+
+.split1 {
+    flex-grow: 1;
+}
+
+.split2 {
+    flex-grow: 2;
 }
 
 /* RESPONSIVE */
