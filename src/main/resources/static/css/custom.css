@@ -95,9 +95,18 @@
   transform: scale(1.01);
 }
 
-.card-virtical {
+.virtical-item {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.horizontal-item {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: flex;
   justify-content: center;
 }
 
@@ -163,11 +172,15 @@
 }
 
 .split1 {
-    flex-grow: 1;
+    flex-grow: 3;
+    width: 40%;
 }
 
 .split2 {
-    flex-grow: 2;
+    flex-grow: 1;
+    width: 60%;
+    overflow-wrap: break-word;
+    text-align: left;
 }
 
 /* RESPONSIVE */
