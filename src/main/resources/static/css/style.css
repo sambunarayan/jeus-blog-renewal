@@ -281,15 +281,17 @@ img {
   margin: 0 auto;
 }
 .profile-img {
-  width: 20%;
-  margin-right: 30px;
+  width: 30%;
+  margin-right: 50px;
   border-radius: 50%;
 }
 .profile-img img {
   border-radius: 50%;
 }
 .profile-body {
-  flex: 1;
+  
+  width: 1%;
+  margin: 30px;
 }
 
 .profile-body p {
@@ -299,6 +301,33 @@ img {
 
 .profile-body p:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.profile-item-div {
+
+}
+
+.profile-body h3 {
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 5px;
+  padding-left: 1em;
+  text-align: left;
+}
+
+.profile-body h3:not(:first-child) {
+  margin-top: 50px;
+}
+
+.profile-body h3::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  content: "";
+  border-radius: 3px;
+  background-color: #333;
 }
 
 /*--------------------------------
