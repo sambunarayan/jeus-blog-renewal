@@ -284,14 +284,17 @@ img {
   width: 30%;
   margin-right: 50px;
   border-radius: 50%;
+  margin-bottom: 30px;
 }
 .profile-img img {
   border-radius: 50%;
 }
+
 .profile-body {
-  
-  width: 1%;
-  margin: 30px;
+  width: 60%;
+  margin: 10px;
+  flex-wrap: wrap;
+  display: flex;
 }
 
 .profile-body p {
@@ -300,11 +303,12 @@ img {
 }
 
 .profile-body p:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .profile-item-div {
-
+  margin: 20px;
+  height: 20%;
 }
 
 .profile-body h3 {
