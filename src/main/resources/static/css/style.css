@@ -29,14 +29,13 @@ img {
 .unerline-h1 {
 font-size: 25px;
   font-weight: bold;
-  line-height: 1;
   margin-top: 10px;
   margin-bottom: 30px;
   text-align: center;
   letter-spacing: .05em;
   color: #333;
   padding-bottom: 10px;
-  border-bottom: 3px solid #333333;
+  border-bottom: 1px solid #333333;
   width: 400px;
   margin-left: auto;
   margin-right: auto; 
@@ -277,16 +276,15 @@ font-size: 25px;
 }
 
 .skill-unerline-h1 {
-font-size: 25px;
+  font-size: 25px;
   font-weight: bold;
-  line-height: 1;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
   letter-spacing: .05em;
   color: #333;
   padding-bottom: 10px;
-  border-bottom: 3px solid #333333;
+  border-bottom: 1px solid #333333;
   width: 160px;
   margin-left: auto;
   margin-right: auto; 
