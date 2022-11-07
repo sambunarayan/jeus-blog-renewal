@@ -7,15 +7,15 @@
     <meta property='og:title' content='Jaewoo Kim ポートフォリオ'>
     <meta property='og:url' content='URLが入る'>
     <meta property='og:description' content='Jaewoo Kimのポートフォリオサイトです。'>
-    <meta property="og:image" content="./static/img/ogp.png">
+    <meta property="og:image" content="/img/ogp.png">
     <meta name="description" content="Jaewoo Kimのポートフォリオサイトです"/>
     <title>Jaewoo Kim ポートフォリオ</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-    <link href="./static/css/ress.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="./static/css/style.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="./static/css/custom.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="/css/style.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="/css/custom.css" media="all" rel="stylesheet" type="text/css"/>
     <link rel="shortcut icon" href="/img/favicon.ico"/>
     <link rel=”canonical” href=”URLが入る”/>
 </head>
@@ -60,7 +60,7 @@
                 <h2 class="title">ABOUT ME</h2>
                 <div class="profile">
                     <p class="profile-img">
-                        <img src="./static/img/jeus.jpg" alt="">
+                        <img src="/img/jeus.jpg" alt="">
                     </p>
                     <div class="profile-body">
                         <div class="profile-item-div">
@@ -106,26 +106,26 @@
                 <div class="cards">
                     <div class="skill-card card-skill-front">
                         <h2 class="skill-unerline-h1">front</h2>
-                        <div class="card__icon"><img src="./static/img/front_js.jpg" alt=""/></div>
-                        <div class="card__icon"><img src="./static/img/bootstrap.png" alt=""/></div>
-                        <div class="card__icon"><img src="./static/img/jquery.png" alt=""/></div>
+                        <div class="card__icon"><img src="/img/front_js.jpg" alt=""/></div>
+                        <div class="card__icon"><img src="/img/bootstrap.png" alt=""/></div>
+                        <div class="card__icon"><img src="/img/jquery.png" alt=""/></div>
                     </div>
                     <div class="skill-card card-skill-front">
                         <h2 class="skill-unerline-h1">backend</h2>
-                        <div class="card__icon"><img src="./static/img/java.jpg" alt=""/></div>
-                        <div class="card__icon"><img src="./static/img/spring-boot.png" alt=""/></div>
-                        <div class="card__icon"><img src="./static/img/payara.png" alt=""/></div>
-                        <div class="card__icon"><img src="./static/img/jakartaee.jpg" alt=""/></div>
+                        <div class="card__icon"><img src="/img/java.jpg" alt=""/></div>
+                        <div class="card__icon"><img src="/img/spring-boot.png" alt=""/></div>
+                        <div class="card__icon"><img src="/img/payara.png" alt=""/></div>
+                        <div class="card__icon"><img src="/img/jakartaee.jpg" alt=""/></div>
                     </div>
                     <div class="virtical-item">
                     <div class="skill-card card-skill-backend">
                         <h2 class="skill-unerline-h1">database</h2>
-                        <div class="ck-img"><img src="./static/img/oracle_database_logo.png" alt=""/></div>
-                        <div class="ck-img"><img src="./static/img/mariadb.jpg" alt=""/></div>
+                        <div class="ck-img"><img src="/img/oracle_database_logo.png" alt=""/></div>
+                        <div class="ck-img"><img src="/img/mariadb.jpg" alt=""/></div>
                     </div>
                     <div class="skill-card card-skill-ci">
                         <h2 class="skill-unerline-h1">CI/CD</h2>
-                        <div class="card__icon"><div class="ck-img"><img src="./static/img/jenkins.jpg" alt=""/></div></div>
+                        <div class="card__icon"><div class="ck-img"><img src="/img/jenkins.jpg" alt=""/></div></div>
                     </div>
                     </div>
                     
@@ -140,10 +140,10 @@
                 <div class="cards">
                     <div class="project-card horizontal">
                         <div class="virtical-item">
-                           <h2 class="unerline-h1">Private Web Application 環境構築</h2>
+                           <h2 class="unerline-h1">Private Web Application Server構築</h2>
                            <div class="horizontal">
                               <div class="split1">
-                                  <img src="./static/img/profile.jpg" alt="">
+                                  <img src="/img/profile.jpg" alt="">
                               </div>
                               <div class="split2">
                                  Privateなインフラ環境を構築しました。<br>
@@ -173,7 +173,7 @@
                            <h2 class="unerline-h1">blog</h2>
                            <div class="horizontal">
                               <div class="split1">
-                                  <img src="./static/img/blog_image.png" alt="">
+                                  <img src="/img/blog_image.png" alt="">
                               </div>
                               <div class="split2">
                                  <b>勉強および知識共有目的のブログです。</b><br>
@@ -188,7 +188,7 @@
                                  サーバーモニタリングにはPrometheusを用いてデータを収集し、Grafanaで集めた情報を視覚化しました。<br>
                                  <a href="./portfolio-blog.html" class="btn btn--black">詳細を見る  >></a>
                                  <hr><br>
-                                 <li>機能：</li>
+                                 <li>機能：TimeLine, 記事投稿, 記事閲覧</li>
                                  <li>Gihub：<a href="https://github.com/sambunarayan/jeus-blog-renewal">jeus-blog-renewal</a></li>
                                  <li>Frontend：HTML, CSS, Javascript, Thymeleaf</li>
                                  <li>Backend：Java, Spring boot</li>
@@ -203,10 +203,20 @@
                            <h2 class="unerline-h1">portfolio</h2>
                            <div class="horizontal">
                               <div class="split1">
-                                  <img src="./static/img/portfolio_image.png" alt="">
+                                  <img src="/img/portfolio_image.png" alt="">
                               </div>
                               <div class="split2">
-                                 bbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                 <b>ポートフォリオ用のウェブページ</b>です。現在見られているこちらのページになります。<br><br>
+                                 
+                                 ポートフォリオが目的ではありますが、<br>
+                                 今までの自分のプロジェクトが整理できて、<br>
+                                 頑張ってきたこと・これから頑張ることがはっきり見えてよかったです。<br><br>
+                                 <a href="./portfolio-blog.html" class="btn btn--black">詳細を見る  >></a>
+                                 <hr><br>
+                                 <li>機能：</li>
+                                 <li>Gihub：<a href="https://github.com/sambunarayan/jeus-blog-renewal">jeus-blog-renewal</a></li>
+                                 <li>Frontend：HTML, CSS, Javascript</li>
+                                 <li>Web server：NGINX</li>
                               </div>
                            </div>
                         </div>
@@ -279,6 +289,6 @@
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script type='text/javascript' src="./static/js/script.js"></script>
+<script type='text/javascript' src="/js/script.js"></script>
 </body>
 </html>
