@@ -230,6 +230,11 @@ a.btn--black:hover {
   background: #696969;
 }
 
+li {
+  margin-bottom: 7px;
+  list-style: square;
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 1600px) {
