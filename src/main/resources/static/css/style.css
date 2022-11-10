@@ -238,6 +238,11 @@ font-size: 25px;
   margin-top: 5px;
 }
 
+.li-project {
+  margin-bottom: 7px;
+  list-style: square;
+}
+
 /*--------------------------------
  Skill
 ---------------------------------*/
