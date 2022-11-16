@@ -14,8 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="./static/css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="./static/css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="/css/style.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel=”canonical” href=”URLが入る” />
 </head>
@@ -48,7 +48,7 @@
           <h2 class="article-title">Private Web Application Server構築</h2>
           <div class="article-body">
             <p>
-              <img src="img/works-sample.jpg" alt="">
+              <img src="/img/jeus-private-infra.png" alt="">
             </p>
             <p>
               Privateなインフラ環境を構築しました。<br>
@@ -59,6 +59,8 @@
               Kubernetesのアーキテクチャーや機能などを理解することができたし、
               CI/CDやモニタリングを構築し運用してみることで、インフラ全般の理解が深まる機会になりました。<br>
             </p>
+            <h3>開発期間</h3>
+            <li class="li-project-details">2021/9 - 2021/11</li>
             <h3>URL</h3>
             <p><a href="https://github.com/sambunarayan/Servers/tree/main/jeus-k8sInfra" target="_blank"
                 rel="noopener">https://github.com/sambunarayan/Servers/tree/main/jeus-k8sInfra</a></p>
@@ -82,11 +84,16 @@
             <li class="li-project-details">Communication Tool：Slack</li>
             <h3>サーバー構成図</h3>
             <p>
-              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。<br>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+              <img src="/img/jeus-k8s.png" alt="">
             </p>
+            <li class="li-project-details">サーバー構築：Vagrantを用いてVirtual boxに仮想サーバー４台を建てました。</li>
+            <li class="li-project-details">CI/CD：Helmを利用してMasterNodeにJenkins podをインストールしました。</li>
+            <li class="li-project-details">Monitoring：Prometheusでサーバー情報を収集しGrafanaで視覚化しました。</li>
+            <h3>CI/CD</h3>
             <p>
-              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
+              <img src="/img/CI_CD.png" alt="">
             </p>
+            Jenkins
           </div>
           <div class="home-link">
             <a href="../portfolio.html#project">Works一覧へ</a>
@@ -107,7 +114,7 @@
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type='text/javascript' src="./static/js/script.js"></script>
+  <script type='text/javascript' src="/js/script.js"></script>
 </body>
 
 </html>
