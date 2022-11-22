@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,290 +9,267 @@
     <meta property='og:url' content='URLが入る'>
     <meta property='og:description' content='Jaewoo Kimのポートフォリオサイトです。'>
     <meta property="og:image" content="/img/ogp.png">
-    <meta name="description" content="Jaewoo Kimのポートフォリオサイトです"/>
+    <meta name="description" content="Jaewoo Kimのポートフォリオサイトです" />
     <title>Jaewoo Kim ポートフォリオ</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-    <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="/css/style.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="/css/custom.css" media="all" rel="stylesheet" type="text/css"/>
-    <link rel="shortcut icon" href="/img/favicon.ico"/>
-    <link rel="canonical" href="URLが入る"/>
+    <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/css/style.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="/css/custom.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link rel="canonical" href="URLが入る" />
 </head>
 
 <body>
-<div class="wrapper">
+    <div class="wrapper">
 
-    <!-- header -->
-    <header class="header">
-        <div class="container">
-            <h1 class="header-logo">
-                <a href="#">Jaewoo Kim</a>
-            </h1>
-            <nav class="gnav">
-                <ul class="gnav-list">
-                    <li class="gnav-item"><a href="#about">ABOUT</a></li>
-                    <li class="gnav-item"><a href="#skill">SKILL</a></li>
-                    <li class="gnav-item"><a href="#project">PROJECT</a></li>
-                    <li class="gnav-item"><a href="#contact">CONTACT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!-- /header -->
-
-    <main class="content">
-
-        <!-- mv -->
-        <div class="mv">
-            <div class="mv-container">
-                <p class="mv-title">Jaewoo Kim</p>
-                <p class="mv-subtitle">PORTFOLIO</p>
-                <p class="mv-text" th:text="#{portfolio.mv.text}">
-                </p>
-            </div>
-        </div>
-        <!-- /mv -->
-
-        <!-- about -->
-        <section class="about section" id="about">
+        <!-- header -->
+        <header class="header">
             <div class="container">
-                <h2 class="title">ABOUT ME</h2>
-                <div class="profile">
-                    <p class="profile-img">
-                        <img src="/img/jeus.jpg" alt="">
+                <h1 class="header-logo">
+                    <a href="#">Jaewoo Kim</a>
+                </h1>
+                <nav class="gnav">
+                    <ul class="gnav-list">
+                        <li class="gnav-item"><a href="#about">ABOUT</a></li>
+                        <li class="gnav-item"><a href="#skill">SKILL</a></li>
+                        <li class="gnav-item"><a href="#project">PROJECT</a></li>
+                        <li class="gnav-item"><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- /header -->
+
+        <main class="content">
+
+            <!-- mv -->
+            <div class="mv">
+                <div class="mv-container">
+                    <p class="mv-title">Jaewoo Kim</p>
+                    <p class="mv-subtitle">PORTFOLIO</p>
+                    <p class="mv-text" th:text="#{portfolio.mv.text}">
                     </p>
-                    <div class="profile-body">
-                        <div class="profile-item-div">
-                          <h3>Name</h3>
-                          <p>
-                              JAEWOO KIM
-                          </p>
-                        </div>
-                        <div class="profile-item-div">
-                          <h3>Birth</h3>
-                          <p>
-                              1989.2.5
-                          </p>
-                        </div>
-                        <div class="profile-item-div">
-                          <h3>City</h3>
-                          <p>
-                              Fukuoka, Japan
-                          </p>
-                        </div>
-                        <div class="profile-item-div">
-                          <h3>e-mail</h3>
-                          <p>
-                              soyou30257@gmail.com
-                          </p>
-                        </div>
-                        <div class="profile-item-div">
-                          <h3>Education</h3>
-                          <p>
-                              Busan University of Foreign Studies. 
-                          </p>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
-        <!-- /about -->
-        
-        <!-- Skill-Custom -->
-        <section class="Skill-custom section" id="skill">
-            <div class="container">
-                <div class="title-div"><h2 class="title">SKILL</h2></div>
-                <div class="cards">
-                    <div class="skill-card card-skill-front">
-                        <h2 class="skill-unerline-h1">front</h2>
-                        <div class="card__icon"><img src="/img/front_js.jpg" alt=""/></div>
-                        <div class="card__icon"><img src="/img/bootstrap.png" alt=""/></div>
-                        <div class="card__icon"><img src="/img/jquery.png" alt=""/></div>
-                    </div>
-                    <div class="skill-card card-skill-front">
-                        <h2 class="skill-unerline-h1">backend</h2>
-                        <div class="card__icon"><img src="/img/java.jpg" alt=""/></div>
-                        <div class="card__icon"><img src="/img/spring-boot.png" alt=""/></div>
-                        <div class="card__icon"><img src="/img/payara.png" alt=""/></div>
-                        <div class="card__icon"><img src="/img/jakartaee.jpg" alt=""/></div>
-                    </div>
-                    <div class="virtical-item">
-                    <div class="skill-card card-skill-backend">
-                        <h2 class="skill-unerline-h1">database</h2>
-                        <div class="ck-img"><img src="/img/oracle_database_logo.png" alt=""/></div>
-                        <div class="ck-img"><img src="/img/mariadb.jpg" alt=""/></div>
-                    </div>
-                    <div class="skill-card card-skill-ci">
-                        <h2 class="skill-unerline-h1">CI/CD</h2>
-                        <div class="card__icon"><div class="ck-img"><img src="/img/jenkins.jpg" alt=""/></div></div>
-                    </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
+            <!-- /mv -->
 
-        <!-- Projects -->
-        <section class="Projects section" id="project">
-            <div class="container">
-                <h2 class="title">PROJECT</h2>
-                <div class="cards">
-                    <div class="project-card horizontal">
-                        <div class="virtical-item">
-                           <h2 class="unerline-h1">Private Web Application Server構築</h2>
-                           <div class="horizontal">
-                              <div class="split1">
-                                 <img src="/img/jeus-private-infra.png" alt="">
-                              </div>
-                              <div class="split2">
-                                 Privateなインフラ環境を構築しました。<br>
-                                 Kubernetesを用いたContain Orchestration Systemを構築し、<br>
-                                 JenkinsによるCI/CDを実施、Prometheusでサーバー情報収集し、<br>
-                                 Grafanaで視覚化したページでサーバーモニタリングを実現することができました。<br><br>
-                                 
-                                 Kubernetesのアーキテクチャーや機能などを理解することができたし、
-                                 CI/CDやモニタリングを構築し運用してみることで、インフラ全般の理解が深まる機会になりました。<br>
-                                 <a href="./portfolio-infra.html" class="btn btn--black">詳細を見る  >></a>
-                                 <hr><br>
-                                 <li class="li-project">機能：</li>
-                                 <li class="li-project">Github：<a href="https://github.com/sambunarayan/Servers/tree/main/jeus-k8sInfra">jeus-k8sInfra</a></li>
-                                 <li class="li-project">仮想環境：Virtual Box, Vagrant</li>
-                                 <li class="li-project">Server：CentOS</li>
-                                 <li class="li-project">Middleware：Kubernetes</li>
-                                 <li class="li-project">DB：MariaDB</li>
-                                 <li class="li-project">CI/CD：Jenkins</li>
-                                 <li class="li-project">Monitoring：Prometheus, Grafana</li>
-                                 <li class="li-project">Communication Tool：Slack</li>
-                              </div>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="project-card horizontal">
-                        <div class="virtical-item">
-                           <h2 class="unerline-h1">blog</h2>
-                           <div class="horizontal">
-                              <div class="split1">
-                                  <img src="/img/blog_image.png" alt="">
-                              </div>
-                              <div class="split2">
-                                 <b>勉強および知識共有目的のブログです。</b><br>
-                                 日々勉強した内容や知識を記録します。</br></br>
-                                 
-                                 最終的な目的は記録ではありますが、<br>
-                                 インフラ構築の勉強も兼ねて開発したプロジェクトです。<br>
-                                 実際公開した環境はAWS EC2環境ですが、<br>
-                                 Staging環境として個人パソコンにKubernetesを導入し、<br>
-                                 負荷に備えて柔軟にscale-out・scale-inできる環境を構築しました。<br><br>
-                                 また、Jenkinsを利用した自動ビルド・デプロイを実現し、デプロイ開始・終了時にslackへの通知もできます。<br>
-                                 サーバーモニタリングにはPrometheusを用いてデータを収集し、Grafanaで集めた情報を視覚化しました。<br>
-                                 <a href="./portfolio-blog.html" class="btn btn--black">詳細を見る  >></a>
-                                 <hr><br>
-                                 <ul>
-                                   <li class="li-project">機能：TimeLine, 記事投稿, 記事閲覧</li>
-                                   <li class="li-project">Github：<a href="https://github.com/sambunarayan/jeus-blog-renewal">jeus-blog-renewal</a></li>
-                                   <li class="li-project">Frontend：HTML, CSS, Javascript, Thymeleaf</li>
-                                   <li class="li-project">Backend：Java, Spring boot</li>
-                                   <li class="li-project">Database：MariaDB</li>
-                                   <li class="li-project">Deployment：AWS(EC2, RDS)</li>
-                                 </ul>
-                              </div>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="project-card horizontal">
-                        <div class="virtical-item">
-                           <h2 class="unerline-h1">portfolio</h2>
-                           <div class="horizontal">
-                              <div class="split1">
-                                  <img src="/img/portfolio_image.png" alt="">
-                              </div>
-                              <div class="split2">
-                                 <b>ポートフォリオ用のウェブページ</b>です。現在見られているこちらのページになります。<br><br>
-                                 
-                                 ポートフォリオが目的ではありますが、<br>
-                                 今までの自分のプロジェクトが整理できて、<br>
-                                 頑張ってきたこと・これから頑張ることがはっきり見えてよかったです。<br><br>
-                                 <a href="./portfolio-blog.html" class="btn btn--black">詳細を見る  >></a>
-                                 <hr><br>
-                                 <li class="li-project">機能：</li>
-                                 <li class="li-project">Github：<a href="https://github.com/sambunarayan/jeus-blog-renewal">jeus-blog-renewal</a></li>
-                                 <li class="li-project">Frontend：HTML, CSS, Javascript</li>
-                                 <li class="li-project">Web server：NGINX</li>
-                              </div>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /Projects -->
-        
-        <!-- Custom -->
-        <section class="Projects section" id="custom">
-            <div class="container">
-                <h2 class="title">CUSTOM</h2>
-                <div class="cards">
-                    <div class="card card-1">
-                        <div class="card__icon"><i class="fas fa-bolt"></i></div>
-                        <p class="card__exit"><i class="fas fa-times"></i></p>
-                        <h2 class="card__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                        <p class="card__apply">
-                            <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+            <!-- about -->
+            <section class="about section" id="about">
+                <div class="container">
+                    <h2 class="title">ABOUT ME</h2>
+                    <div class="profile">
+                        <p class="profile-img">
+                            <img src="/img/jeus.jpg" alt="">
                         </p>
-                    </div>
-                    <div class="card card-2">
-                        <div class="card__icon"><i class="fas fa-bolt"></i></div>
-                        <p class="card__exit"><i class="fas fa-times"></i></p>
-                        <h2 class="card__title">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-                        <p class="card__apply">
-                            <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
-                        </p>
-                    </div>
-                    <div class="card card-3">
-                        <div class="card__icon"><i class="fas fa-bolt"></i></div>
-                        <p class="card__exit"><i class="fas fa-times"></i></p>
-                        <h2 class="card__title">Ut enim ad minim veniam.</h2>
-                        <p class="card__apply">
-                            <a class="card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
-                        </p>
+                        <div class="profile-body">
+                            <div class="profile-item-div">
+                                <h3>Name</h3>
+                                <p>
+                                    JAEWOO KIM
+                                </p>
+                            </div>
+                            <div class="profile-item-div">
+                                <h3>Birth</h3>
+                                <p>
+                                    1989.2.5
+                                </p>
+                            </div>
+                            <div class="profile-item-div">
+                                <h3>City</h3>
+                                <p>
+                                    Fukuoka, Japan
+                                </p>
+                            </div>
+                            <div class="profile-item-div">
+                                <h3>e-mail</h3>
+                                <p>
+                                    soyou30257@gmail.com
+                                </p>
+                            </div>
+                            <div class="profile-item-div">
+                                <h3>Education</h3>
+                                <p>
+                                    Busan University of Foreign Studies.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- /Projects -->
+            </section>
+            <!-- /about -->
 
-        <!-- contact -->
-        <section class="contact section" id="contact">
-            <div class="container">
-                <h2 class="title">CONTACT</h2>
-                <p class="lead">
-                    お問い合わせは、<br class="sp-only">SNSかメールにてお願いいたします。
-                </p>
-                <div class="contact-list">
-                    <a class="contact-item" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
-                    <a class="contact-item" href="https://www.instagram.com/" target="_blank"
-                       rel="noopener">Instagram</a>
-                    <span class="contact-item">soyou30257@gmail.com</span>
+            <!-- Skill-Custom -->
+            <section class="Skill-custom section" id="skill">
+                <div class="container">
+                    <div class="title-div">
+                        <h2 class="title">SKILL</h2>
+                    </div>
+                    <div class="cards">
+                        <div class="skill-card card-skill-front">
+                            <h2 class="skill-unerline-h1">front</h2>
+                            <div class="card__icon"><img src="/img/front_js.jpg" alt="" /></div>
+                            <div class="card__icon"><img src="/img/bootstrap.png" alt="" /></div>
+                            <div class="card__icon"><img src="/img/jquery.png" alt="" /></div>
+                        </div>
+                        <div class="skill-card card-skill-front">
+                            <h2 class="skill-unerline-h1">backend</h2>
+                            <div class="card__icon"><img src="/img/java.jpg" alt="" /></div>
+                            <div class="card__icon"><img src="/img/spring-boot.png" alt="" /></div>
+                            <div class="card__icon"><img src="/img/payara.png" alt="" /></div>
+                            <div class="card__icon"><img src="/img/jakartaee.jpg" alt="" /></div>
+                        </div>
+                        <div class="virtical-item">
+                            <div class="skill-card card-skill-backend">
+                                <h2 class="skill-unerline-h1">database</h2>
+                                <div class="ck-img"><img src="/img/oracle_database_logo.png" alt="" /></div>
+                                <div class="ck-img"><img src="/img/mariadb.jpg" alt="" /></div>
+                            </div>
+                            <div class="skill-card card-skill-ci">
+                                <h2 class="skill-unerline-h1">CI/CD</h2>
+                                <div class="card__icon">
+                                    <div class="ck-img"><img src="/img/jenkins.jpg" alt="" /></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+            </section>
+
+            <!-- Projects -->
+            <section class="Projects section" id="project">
+                <div class="container">
+                    <h2 class="title">PROJECT</h2>
+                    <div class="cards">
+                        <div class="project-card horizontal">
+                            <div class="virtical-item">
+                                <h2 class="unerline-h1">Private Web Application Server構築</h2>
+                                <div class="horizontal">
+                                    <div class="split1">
+                                        <img src="/img/jeus-private-infra.png" alt="">
+                                    </div>
+                                    <div class="split2">
+                                        Privateなインフラ環境を構築しました。<br>
+                                        Kubernetesを用いたContain Orchestration Systemを構築し、<br>
+                                        JenkinsによるCI/CDを実施、Prometheusでサーバー情報収集し、<br>
+                                        Grafanaで視覚化したページでサーバーモニタリングを実現することができました。<br><br>
+
+                                        Kubernetesのアーキテクチャーや機能などを理解することができたし、
+                                        CI/CDやモニタリングを構築し運用してみることで、インフラ全般の理解が深まる機会になりました。<br>
+                                        <a href="./portfolio-infra.html" class="btn btn--black">詳細を見る >></a>
+                                        <hr><br>
+                                        <li class="li-project">機能：</li>
+                                        <li class="li-project">Github：<a
+                                                href="https://github.com/sambunarayan/Servers/tree/main/jeus-k8sInfra">jeus-k8sInfra</a>
+                                        </li>
+                                        <li class="li-project">仮想環境：Virtual Box, Vagrant</li>
+                                        <li class="li-project">Server：CentOS</li>
+                                        <li class="li-project">Middleware：Kubernetes</li>
+                                        <li class="li-project">DB：MariaDB</li>
+                                        <li class="li-project">CI/CD：Jenkins</li>
+                                        <li class="li-project">Monitoring：Prometheus, Grafana</li>
+                                        <li class="li-project">Communication Tool：Slack</li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card horizontal">
+                            <div class="virtical-item">
+                                <h2 class="unerline-h1">blog</h2>
+                                <div class="horizontal">
+                                    <div class="split1">
+                                        <img src="/img/blog_image.png" alt="">
+                                    </div>
+                                    <div class="split2">
+                                        <b>勉強および知識共有目的のブログです。</b><br>
+                                        日々勉強した内容や知識を記録します。</br></br>
+
+                                        最終的な目的は記録ではありますが、<br>
+                                        インフラ構築の勉強も兼ねて開発したプロジェクトです。<br>
+                                        実際公開した環境はAWS EC2環境ですが、<br>
+                                        Staging環境として個人パソコンにKubernetesを導入し、<br>
+                                        負荷に備えて柔軟にscale-out・scale-inできる環境を構築しました。<br><br>
+                                        また、Jenkinsを利用した自動ビルド・デプロイを実現し、デプロイ開始・終了時にslackへの通知もできます。<br>
+                                        サーバーモニタリングにはPrometheusを用いてデータを収集し、Grafanaで集めた情報を視覚化しました。<br>
+                                        <a href="./portfolio-blog.html" class="btn btn--black">詳細を見る >></a>
+                                        <hr><br>
+                                        <ul>
+                                            <li class="li-project">機能：TimeLine, 記事投稿, 記事閲覧</li>
+                                            <li class="li-project">Github：<a
+                                                    href="https://github.com/sambunarayan/jeus-blog-renewal">jeus-blog-renewal</a>
+                                            </li>
+                                            <li class="li-project">Frontend：HTML, CSS, Javascript, Thymeleaf</li>
+                                            <li class="li-project">Backend：Java, Spring boot</li>
+                                            <li class="li-project">Database：MariaDB</li>
+                                            <li class="li-project">Deployment：AWS(EC2, RDS)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card horizontal">
+                            <div class="virtical-item">
+                                <h2 class="unerline-h1">portfolio</h2>
+                                <div class="horizontal">
+                                    <div class="split1">
+                                        <img src="/img/portfolio_image.png" alt="">
+                                    </div>
+                                    <div class="split2">
+                                        <b>ポートフォリオ用のウェブページ</b>です。現在見られているこちらのページになります。<br><br>
+
+                                        ポートフォリオが目的ではありますが、<br>
+                                        今までの自分のプロジェクトが整理できて、<br>
+                                        頑張ってきたこと・これから頑張ることがはっきり見えてよかったです。<br><br>
+                                        <a href="./portfolio-blog.html" class="btn btn--black">詳細を見る >></a>
+                                        <hr><br>
+                                        <li class="li-project">機能：</li>
+                                        <li class="li-project">Github：<a
+                                                href="https://github.com/sambunarayan/jeus-blog-renewal">jeus-blog-renewal</a>
+                                        </li>
+                                        <li class="li-project">Frontend：HTML, CSS, Javascript</li>
+                                        <li class="li-project">Web server：NGINX</li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /Projects -->
+
+            <!-- contact -->
+            <section class="contact section" id="contact">
+                <div class="container">
+                    <h2 class="title">CONTACT</h2>
+                    <p class="lead">
+                        お問い合わせは、<br class="sp-only">SNSかメールにてお願いいたします。
+                    </p>
+                    <div class="contact-list">
+                        <a class="contact-item" href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
+                        <a class="contact-item" href="https://www.instagram.com/" target="_blank"
+                            rel="noopener">Instagram</a>
+                        <span class="contact-item">soyou30257@gmail.com</span>
+                    </div>
+                </div>
+            </section>
+            <!-- /contact -->
+            <div class="page-top" id="js-page-top">
+                <span class="material-icons-outlined">expand_less</span>
             </div>
-        </section>
-        <!-- /contact -->
-        <div class="page-top" id="js-page-top">
-            <span class="material-icons-outlined">expand_less</span>
-        </div>
-    </main>
+        </main>
 
-    <!-- footer -->
-    <footer class="footer">
-        <div class="copyright">&copy;Jaewoo Kim</div>
-    </footer>
-    <!-- /footer -->
+        <!-- footer -->
+        <footer class="footer">
+            <div class="copyright">&copy;Jaewoo Kim</div>
+        </footer>
+        <!-- /footer -->
 
-</div>
-    
+    </div>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type='text/javascript' src="/js/script.js"></script>
+
 </html>
