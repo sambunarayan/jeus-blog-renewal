@@ -14,8 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="/css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="./static/css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="./static/css/style.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel=”canonical” href=”URLが入る” />
 </head>
@@ -48,7 +48,7 @@
           <h2 class="article-title">Private Web Application Server構築</h2>
           <div class="article-body">
             <p>
-              <img src="/img/jeus-private-infra.png" alt="">
+              <img src="./static/img/jeus-private-infra.png" alt="">
             </p>
             <p>
               Privateなインフラ環境を構築しました。<br>
@@ -84,18 +84,22 @@
             <li class="li-project-details">Communication Tool：Slack</li>
             <h3>サーバー構成図</h3>
             <p>
-              <img src="/img/jeus-k8s.png" alt="">
+              <img src="./static/img/jeus-k8s.png" alt="">
             </p>
             <li class="li-project-details">サーバー構築：Vagrantを用いてVirtual boxに仮想サーバー４台を建てました。</li>
             <li class="li-project-details">CI/CD：Helmを利用してMasterNodeにJenkins podをインストールしました。</li>
             <li class="li-project-details">Monitoring：Prometheusでサーバー情報を収集しGrafanaで視覚化しました。</li>
             <h3>CI/CD</h3>
             <p>
-              <img src="/img/CI_CD.png" alt="">
+              <img src="./static/img/CI_CD.png" alt="">
             </p>
             Jenkins
 
             <h3>Monitoring</h3>
+            Prometheusでサーバーの情報を収集し、Grafanaで視覚化しました。
+            トラフィックやサーバー負荷の推移を分析し、サーバーを改善していくことで、
+            サービス運用を経験することが目標です。
+            
           </div>
           <div class="home-link">
             <a href="../portfolio.html#project">Project一覧へ</a>
@@ -116,7 +120,7 @@
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type='text/javascript' src="/js/script.js"></script>
+  <script type='text/javascript' src="./static/js/script.js"></script>
 </body>
 
 </html>
