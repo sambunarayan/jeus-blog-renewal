@@ -90,10 +90,28 @@
             <li class="li-project-details">CI/CD：Helmを利用してMasterNodeにJenkins podをインストールしました。</li>
             <li class="li-project-details">Monitoring：Prometheusでサーバー情報を収集しGrafanaで視覚化しました。</li>
             <h3>CI/CD</h3>
+            Jenkinsを利用してビルドとデプロイを行います。<br>
+            JenkinsのKubernetes continuouse deploy pluginでGit hubを定期的に確認し、<br>
+            Git hubの新たなプッシュを検知したら自動的にビルドを開始しdocker imageを作成します。<br><br>
+
+            作成されたdocker imageはdocker registryに登録されます。
+            その後、kubernetesのdeploymentが開始され、docker registryからdocker imageを取得してPodを作成します。<br>
+            尚、ビルド開始とデプロイ終了時にSlackに通知します。<br><br>
+
+            ※Kubernetes deploymentは無停止デプロイを実現するためにblue-green戦略を採用しています。<br>
+
             <p>
               <img src="./static/img/CI_CD.png" alt="">
             </p>
-            Jenkins
+            ①Push:<br>
+            ②Build & Docker image register:<br>
+            ③Deployment:<br>
+            ④Notification(web hook):<br><br>
+
+            <b>Jenkinsビルドが開始したときとビルドが完了したときにSlackに通知します。</b>
+            <p>
+              <img src="./static/img/jenkins-notice.png" alt="">
+            </p>
 
             <h3>Monitoring</h3>
             Prometheusでサーバーの情報を収集し、Grafanaで視覚化しました。
