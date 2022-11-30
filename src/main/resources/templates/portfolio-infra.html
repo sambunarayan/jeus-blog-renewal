@@ -103,11 +103,12 @@
             <p>
               <img src="./static/img/CI_CD.png" alt="">
             </p>
-            ①Push:エンジニアがGit hubにプッシュします。<br>
-            ②Build & Docker image register:Git hubから資産をプルし、ビルドを開始します。<br>
-            ビルドされたjarファイルをもとにDocker imageを作成します。<br>
-            ③Deployment:<br>
-            ④Notification(web hook):<br><br>
+            <b>①Push:</b>エンジニアがGit hubにプッシュします。<br>
+            <b>②Build & Docker image register:</b>Git hubから資産をプルし、ビルドを開始します。<br>
+            &nbsp;&nbsp;&nbsp;ビルドされたjarをもとにDocker imageを作成しprivate docker registryに登録します。<br>
+            <b>③Deployment:</b>モジュールのデプロイメントを定義したyamlをもとにデプロイを開始し、Kubernetes podを作成する。<br>
+            <b>④Notification(web hook):</b>デプロイが完了したらJenkinsからSlackに完了の通知をします。<br>
+            &nbsp;&nbsp;&nbsp;このときはSlackのWeb hookを利用します。<br><br>
 
             <b>Jenkinsビルドが開始したときとビルドが完了したときにSlackに通知します。</b>
             <p>
