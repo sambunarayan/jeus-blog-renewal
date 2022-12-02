@@ -14,8 +14,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="./static/css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="./static/css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="/css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="/css/style.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel=”canonical” href=”URLが入る” />
 </head>
@@ -48,7 +48,7 @@
           <h2 class="article-title">Private Web Application Server構築</h2>
           <div class="article-body">
             <p>
-              <img src="./static/img/jeus-private-infra.png" alt="">
+              <img src="/img/jeus-private-infra.png" alt="">
             </p>
             <p>
               Privateなインフラ環境を構築しました。<br>
@@ -84,7 +84,7 @@
             <li class="li-project-details">Communication Tool：Slack</li>
             <h3>サーバー構成図</h3>
             <p>
-              <img src="./static/img/jeus-k8s.png" alt="">
+              <img src="/img/jeus-k8s.png" alt="">
             </p>
             <li class="li-project-details">サーバー構築：Vagrantを用いてVirtual boxに仮想サーバー４台を建てました。</li>
             <li class="li-project-details">CI/CD：Helmを利用してMasterNodeにJenkins podをインストールしました。</li>
@@ -101,7 +101,7 @@
             ※Kubernetes deploymentは無停止デプロイを実現するためにblue-green戦略を採用しています。<br>
 
             <p>
-              <img src="./static/img/CI_CD.png" alt="">
+              <img src="/img/CI_CD.png" alt="">
             </p>
             <b>①Push:</b>エンジニアがGit hubにプッシュします。<br>
             <b>②Build & Docker image register:</b>Git hubから資産をプルし、ビルドを開始します。<br>
@@ -112,7 +112,7 @@
 
             <b>Jenkinsビルドが開始したときとビルドが完了したときにSlackに通知します。</b>
             <p>
-              <img src="./static/img/jenkins-notice.png" alt="">
+              <img src="/img/jenkins-notice.png" alt="">
             </p>
 
             <h3>Monitoring</h3>
@@ -122,7 +122,7 @@
             
           </div>
           <div class="home-link">
-            <a href="../portfolio.html#project">Project一覧へ</a>
+            <a href="../portfolio.html#project-infra">Project infra slideへ</a>
           </div>
         </div>
       </article>
@@ -140,7 +140,7 @@
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type='text/javascript' src="./static/js/script.js"></script>
+  <script type='text/javascript' src="/js/script.js"></script>
 </body>
 
 </html>
