@@ -9,8 +9,8 @@ spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mysql://192.168.0.13:3306/blogdb?useUnicode=true&characterEncoding=utf8mb4&passwordCharacterEncoding=utf8
-    username: root
-    password: root
+    username: blog_user
+    password: 1234
   jpa:
     show-sql: true
   http:
