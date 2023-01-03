@@ -10,8 +10,8 @@
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
         <RollingFile name="RollingFile"
-                     fileName="./logs/standard.log"
-                     filePattern="./logs/$${date:yyyy-MM}/standard-%d{yyyy-MM-dd}-%i.log.gz">
+                     fileName="/audit/logs/standard.log"
+                     filePattern="/audit/logs/$${date:yyyy-MM}/standard-%d{yyyy-MM-dd}-%i.log.gz">
             <PatternLayout pattern="${LOG_PATTERN}"/>
             <Policies>
                 <OnStartupTriggeringPolicy/>
